@@ -8,7 +8,7 @@
     "email": "email dev",
     "start": "next start",
     "stripe-webhooks": "stripe listen --forward-to localhost:3000/api/webhooks/stripe",
-    "vercel-build": "next build",
+    "vercel-build": "SKIP_ENV_VALIDATION=1 prisma generate && SKIP_ENV_VALIDATION=1 next build",
     "old-vercel-build": "prisma generate && prisma migrate deploy && next build",
     "postinstall": "prisma generate",
     "lint": "next lint",
