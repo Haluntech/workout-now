@@ -4,6 +4,9 @@ import { prisma } from "@/shared/lib/prisma";
 import { PremiumService } from "@/shared/lib/premium/premium.service";
 import { auth } from "@/features/auth/lib/better-auth";
 
+// Force dynamic rendering for this API route
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   try {
     const session = await auth.api.getSession({

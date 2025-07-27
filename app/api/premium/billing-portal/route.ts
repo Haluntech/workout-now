@@ -3,6 +3,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { PremiumManager } from "@/shared/lib/premium/premium.manager";
 import { serverRequiredUser } from "@/entities/user/model/get-server-session-user";
 
+// Force dynamic rendering for this API route
+export const dynamic = 'force-dynamic';
+
 /**
  * POST /api/premium/billing-portal
  *
